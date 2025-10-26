@@ -1,6 +1,6 @@
-# Hi there, I'm Reshma Thomas! 👋
+# Hi there, I'm Reshma Thomas! 
 
-## 🚀 About Me
+## About Me
 AI/ML Engineer with 9+ years of editorial and analytical expertise, transitioning into the world of Artificial Intelligence and Machine Learning. I combine strong analytical skills from my editorial background with hands-on experience in building intelligent systems.
 
 - 🔭 Currently completing **Post Graduate Diploma in AI & ML** from I Hub School of Learning
@@ -10,7 +10,7 @@ AI/ML Engineer with 9+ years of editorial and analytical expertise, transitionin
 - 📍 Based in Kochi, Kerala, India
 - 💡 Passionate about leveraging AI to solve real-world problems
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 ### Languages & Tools
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
