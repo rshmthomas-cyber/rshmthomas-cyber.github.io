@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reshma Thomas - AI/ML Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2193b0;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #2193b0;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #2193b0;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: #2193b0;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(33, 147, 176, 0.3);
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2193b0;
+            border-bottom: 3px solid #2193b0;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #fff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(33, 147, 176, 0.3);
+            border-color: #2193b0;
+        }
+
+        .project-card h3 {
+            color: #2193b0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .project-card li {
+            margin-bottom: 8px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #e8f8fc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #2193b0;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid #2193b0;
+        }
+
+        .experience-item h3 {
+            color: #2193b0;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .duration {
+            color: #999;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+        }
+
+        .award {
+            background: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #ffb300;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .award strong {
+            color: #ff8f00;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cert-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2193b0;
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(33, 147, 176, 0.2);
+        }
+
+        .cert-card h4 {
+            color: #2193b0;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reshma Thomas</h1>
+            <p class="tagline">AI/ML Engineer | Data Analyst | Contributing Editor</p>
+            <p class="location">📍 Kochi, Kerala 682024</p>
+            <div class="contact-links">
+                <a href="mailto:reshma.thomas.nobel@gmail.com">📧 Email</a>
+                <a href="https://github.com/rshmthomas-cyber" target="_blank">💻 GitHub</a>
+                <a href="http://www.linkedin.com/in/reshma-thomas-nobel" target="_blank">🔗 LinkedIn</a>
+                <a href="tel:+919745421089">📱 +91 9745421089</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                AI/ML Engineer with 9+ years of editorial and analytical expertise, specializing in data analysis, process optimization, and systematic problem-solving. Currently completing a Post Graduate Diploma in AI & ML with hands-on experience in supervised/unsupervised learning, model deployment, and full-stack development. Actively expanding expertise in deep learning and computer vision through applied projects, seeking opportunities to leverage technical skills and analytical background to deliver innovative AI solutions.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Git/GitHub</li>
+                        <li>VS Code, PyCharm</li>
+                        <li>Jupyter Notebook</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <ul>
+                        <li>Supervised/Unsupervised Learning</li>
+                        <li>Neural Networks</li>
+                        <li>Computer Vision</li>
+                        <li>Model Evaluation</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>Pandas, NumPy</li>
+                        <li>Scikit-Learn</li>
+                        <li>TensorFlow</li>
+                        <li>OpenCV</li>
+                        <li>Flask, Django</li>
+                        <li>Matplotlib, Seaborn</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & Analytics</h3>
+                    <ul>
+                        <li>Data Preprocessing</li>
+                        <li>Data Visualization</li>
+                        <li>Database Design</li>
+                        <li>Data Curation</li>
+                        <li>Microsoft Excel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Find My Stress - AI-Powered Stress Assessment</h3>
+                    <p>Intelligent stress assessment and support system for students using machine learning.</p>
+                    <ul>
+                        <li>Developed ML model using Support Vector Machine (SVM) achieving <strong>99.05% accuracy</strong></li>
+                        <li>Predicts stress types: Eustress (positive), Distress (negative), and no stress</li>
+                        <li>Built Django web application with interactive AI chatbot 'StressLess' for stress management</li>
+                        <li>Deployed using Streamlit for rapid prototyping and user testing</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SVM</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>STAR KIDS - Smart Tasks And Rewards System</h3>
+                    <p>Full-stack web application for task management and child motivation through gamification.</p>
+                    <ul>
+                        <li>Built using Flask, SQLite, HTML/CSS with responsive UI/UX design</li>
+                        <li>Implemented gamification features to encourage task completion</li>
+                        <li>Created data analytics dashboard for parents to track metrics</li>
+                        <li>Secure authentication system using Bcrypt</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Bcrypt</span>
+                        <span class="tech-tag">Data Analytics</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bioactive Compounds Research</h3>
+                    <p>Computational biology research for cancer therapy analysis using plant-derived compounds.</p>
+                    <ul>
+                        <li>Analyzed compounds from Garcinia Cambogia and Strychnos Nux Vomica</li>
+                        <li>Applied systematic data analysis for identifying novel cancer therapeutic targets</li>
+                        <li>Utilized bioinformatics tools and drug discovery databases</li>
+                        <li>Conducted comprehensive compound analysis for cancer research</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Bioinformatics</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Research</span>
+                        <span class="tech-tag">Drug Discovery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Contributing Editor & Editorial Council Member</h3>
+                <p class="duration">Shalom Tidings, Shalom Media USA | January 2017 - Present</p>
+                <p>
+                    Managed end-to-end content data pipeline processing 1000+ articles annually across multiple international markets. Designed automated workflows, reducing processing time by 40% through systematic standardization. Built comprehensive tracking systems with advanced Excel and coordinated translation workflows and cross-linguistic data integrity across 12 languages. Successfully led team correspondence with 50+ writers and optimized data collection processes.
+                </p>
+                <div class="award">
+                    <strong>🏆 Key Achievements:</strong><br>
+                    Gold Award for "I've Got My Eyes on You" from Australian Religious Press Association (2020)<br>
+                    Contributed to Best Magazine of the Year awards (Catholic Press Awards USA) in 2021, 2022, and 2023
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="experience-item">
+                <h3>Post Graduate Diploma in Artificial Intelligence & Machine Learning</h3>
+                <p class="duration">I Hub School of Learning | 2024 - Present</p>
+                <ul>
+                    <li>Hands-on training in supervised and unsupervised learning algorithms</li>
+                    <li>Deep learning and computer vision project implementations</li>
+                    <li>Model deployment and full-stack web application development</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Bachelor of Technology in Biotechnology</h3>
+                <p class="duration">Calicut University, Kerala | First Class with Honors</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Diploma in Administration and Management</h3>
+                <p class="duration">ICFAI University, Dehradun</p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h4>Supervised Machine Learning: Regression and Classification</h4>
+                    <p>Stanford/DeepLearning.ai (Coursera)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Advanced Learning Algorithms</h4>
+                    <p>Stanford/DeepLearning.ai (Ongoing)</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Python 101 for Data Science</h4>
+                    <p>IBM Cognitive Class</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Introduction to Programming and Python</h4>
+                    <p>Kaggle</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Reshma Thomas. All rights reserved.</p>
+            <p>Built with passion for AI & Machine Learning 🚀</p>
+        </footer>
+    </div>
+</body>
+</html>
