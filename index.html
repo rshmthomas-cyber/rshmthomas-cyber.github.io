@@ -889,13 +889,37 @@
   <div class="hero-right">
     <div class="photo-frame">
       <div class="photo-bg">
-        <img src="photo.jpg.png" alt="Reshma Thomas" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="photo-placeholder" style="display:none;">
+        <img id="profilePhoto" src="photo.jpg.png" alt="Reshma Thomas" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+        <div class="photo-placeholder" id="photoFallback" style="display:none;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
             <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
           </svg>
           <span>Your Photo Here</span>
         </div>
+        <script>
+          (function() {
+            var attempts = [
+              "photo.jpg.png",
+              "photo.jpg",
+              "photo.png",
+              "https://raw.githubusercontent.com/rshmthomas-cyber/rshmthomas-cyber.github.io/main/photo.jpg.png",
+              "https://raw.githubusercontent.com/rshmthomas-cyber/rshmthomas-cyber.github.io/main/photo.jpg"
+            ];
+            var idx = 0;
+            var img = document.getElementById("profilePhoto");
+            var fallback = document.getElementById("photoFallback");
+            function tryNext() {
+              if (idx >= attempts.length) {
+                img.style.display = "none";
+                fallback.style.display = "flex";
+                return;
+              }
+              img.src = attempts[idx++];
+            }
+            img.onerror = tryNext;
+            img.onload = function() { fallback.style.display = "none"; img.style.display = "block"; };
+          })();
+        </script>
       </div>
       <div class="photo-accent-line"></div>
       <div class="hero-tag">AI / ML Engineer</div>
