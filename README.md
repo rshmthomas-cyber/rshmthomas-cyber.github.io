@@ -1,87 +1,83 @@
-# Hi there, I'm Reshma Thomas! 👋
+# Hi, I'm Reshma 👋
 
-## 🚀 About Me
-AI/ML Engineer with 9+ years of editorial and analytical expertise, transitioning into the world of Artificial Intelligence and Machine Learning. I combine strong analytical skills from my editorial background with hands-on experience in building intelligent systems.
+**AI/ML Engineer building production AI agents** — agentic RAG, multi-agent orchestration, and automation pipelines that ship and get used.
 
-- 🔭 Currently completing **Post Graduate Diploma in AI & ML** from I Hub School of Learning
-- 🌱 Learning **Deep Learning** and **Computer Vision**
-- 💼 Contributing Editor at Shalom Tidings, Shalom Media USA
-- 🏆 Award-winning writer and content strategist
-- 📍 Based in Kochi, Kerala, India
-- 💡 Passionate about leveraging AI to solve real-world problems
-
-## 🛠️ Technical Skills
-
-### Languages & Tools
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-
-### Machine Learning & AI
-- Supervised & Unsupervised Learning
-- Neural Networks
-- Computer Vision
-- Model Evaluation & Feature Engineering
-
-### Frameworks & Libraries
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-
-## 🔥 Featured Projects
-
-### 🧠 [Find My Stress - AI-Powered Stress Assessment](https://github.com/rshmthomas-cyber/find-my-stress)
-Machine Learning-based stress assessment system for students achieving **99.05% accuracy**
-- **Tech Stack:** Python, SVM, Django, Streamlit, HTML/CSS
-- **Features:** AI Chatbot 'StressLess' for stress management tips
-- **Impact:** Helps identify Eustress, Distress, and stress-free states
-
-### ⭐ [STAR KIDS - Smart Tasks And Rewards System](https://github.com/rshmthomas-cyber/star-kids)
-Full-stack gamification app for task management and child motivation
-- **Tech Stack:** Flask, SQLite, HTML/CSS, Bcrypt
-- **Features:** Data analytics dashboard, secure authentication
-- **Impact:** Helps parents track and motivate children's task completion
-
-### 🔬 [Bioactive Compounds Research](https://github.com/rshmthomas-cyber/bioactive-compounds)
-Computational biology research for cancer therapy analysis
-- **Tech Stack:** Bioinformatics tools, Data Analysis
-- **Focus:** Plant-derived compounds for novel cancer therapeutic targets
-
-## 📈 GitHub Stats
-
-![Reshma's GitHub stats](https://github-readme-stats.vercel.app/api?username=rshmthomas-cyber&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=rshmthomas-cyber&layout=compact&theme=radical)
-
-## 🏆 Achievements
-- 🥇 **Gold Award** - Australian Religious Press Association (2020)
-- 🏅 **Best Magazine of the Year** - Catholic Press Awards USA (2021, 2022, 2023)
-- 📊 Reduced content processing time by **40%** through workflow optimization
-- 🌍 Managed translation workflows across **12 languages**
-
-## 📚 Certifications
-- ✅ Supervised Machine Learning: Regression and Classification - Stanford/DeepLearning.ai
-- 🔄 Advanced Learning Algorithms - Stanford/DeepLearning.ai (Ongoing)
-- ✅ Python 101 for Data Science - IBM Cognitive Class
-- ✅ Introduction to Programming and Python - Kaggle
-
-## 📫 How to Reach Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](http://www.linkedin.com/in/reshma-thomas-nobel)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:reshma.thomas.nobel@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://rshmthomas-cyber.github.io)
-
-## 💭 Fun Facts
-- 📝 Published writer with 9+ years in editorial work
-- 🧬 Biotechnology background meets AI/ML
-- 🌏 Work spans across international markets
-- 🎯 Passionate about creating AI solutions that make a difference
+📍 Kochi, Kerala · 🌐 [Portfolio](https://rshmthomas-cyber.github.io/) · 💼 [LinkedIn](https://www.linkedin.com/in/reshma-thomas-nobel) · ✍️ [Medium](https://medium.com/@reshma.thomas.nobel)
 
 ---
 
-⭐️ From [rshmthomas-cyber](https://github.com/rshmthomas-cyber)
+## 🚀 What I'm building
 
-*"Combining the art of storytelling with the science of AI"*
+### [Qatar Labour Law — Agentic RAG Assistant](https://hr-law-assistant.streamlit.app) · `live in production`
+
+An agentic RAG system that answers Qatar labour law questions with the exact article cited — **live and used daily by a corporate HR team in Doha.**
+
+The interesting part isn't the retrieval, it's that retrieval is a **tool the model chooses to use**. It searches, judges whether the results are sufficient, and re-queries for multi-step legal questions. Three purpose-built tools:
+
+- `search_by_topic` — semantic search for open questions when you don't know the article
+- `search_by_article_number` — exact lookup, because semantic search is unreliable for precise references
+- `compare_articles` — pulls two articles side by side so the agent reasons *across* provisions
+
+Every answer is grounded in retrieved source text with the article cited. In a legal context, a confident wrong answer is a liability — so the system doesn't guess.
+
+`Claude Tool Use API` · `ChromaDB` · `PyMuPDF` · `Streamlit` · `Agentic RAG`
+
+<!-- TODO: add repo link when public -->
+
+---
+
+### Saksham — Four-Agent Assistive Communication System
+
+A multi-agent system that interprets need from live vision and speaks it in a personalized voice, built on Google's Agent Development Kit.
+
+Four specialised agents: **perception** (OpenCV frame capture) → **need detection** (Gemini Vision) → **communication** (natural language generation) → **voice** (personalized TTS).
+
+The architectural piece I'd point to is the **confidence gate**, which sits at detection — *before* anything gets phrased:
+
+| Confidence | Action | Why |
+|---|---|---|
+| ≥ 0.70 | Proceed autonomously | Sure enough to act |
+| < 0.70 | Escalate to a human | Not sure enough to speak on someone's behalf |
+| < 0.50 | Loop back to **recapture** | At this point the *frame* is the problem, not the reasoning |
+
+That last row is the design decision I'm proudest of. Re-interpreting a bad image just gives you the same bad answer — so recovery is routed to where the failure actually originates. The system is built to know when *not* to trust itself.
+
+Validated against a 5-scenario eval suite: 100% task success at 93% average confidence. *(A smoke-test suite — expanding to adversarial and edge cases is the next step.)*
+
+`Google ADK` · `Gemini Vision` · `MCP` · `OpenCV` · `Multi-Agent Orchestration` · `Human-in-the-Loop`
+
+<!-- TODO: add repo link when public -->
+
+---
+
+## 🛠️ Tech
+
+**Agentic AI & Automation**
+`Claude Tool Use API` `Google ADK` `MCP` `Agentic RAG` `Multi-Agent Orchestration` `ChromaDB` `Vector Search` `Human-in-the-Loop Design`
+
+**LLMs & GenAI**
+`Claude API` `Gemini 1.5 Pro` `Gemini Vision` `OpenAI API` `Prompt Engineering` `RAG` `Fine-tuning` `Qwen 2.5 VLM`
+
+**ML / CV / OCR**
+`Python` `PyTorch` `TensorFlow` `Keras` `Scikit-learn` `OpenCV` `YOLO` `MobileNet` `PaddleOCR` `EasyOCR` `Roboflow`
+
+**Backend & Deployment**
+`FastAPI` `Flask` `Django` `Streamlit` `Docker` `REST APIs` `Git`
+
+---
+
+## 🎯 The unusual part of my background
+
+Alongside the engineering, I've spent **8+ years as a Contributing Editor at Shalom Tidings**, coordinating 50+ contributors across 12 languages.
+
+That's not a detour from the AI work — it's where I learned to ship on a deadline for other people, and it's where I built my first automation: content workflows processing **1,000+ documents annually across 12 languages, cutting processing time by 40%**.
+
+🏆 Gold Award, Australian Religious Press Association (2020) · Best Magazine of the Year, Catholic Press Awards USA (2021, 2022, 2023)
+
+---
+
+## 💬 Currently
+
+Building agentic systems and taking on **contract work** in GenAI, agentic AI, and workflow automation — with a particular interest in the GCC market.
+
+Reach me on [LinkedIn](https://www.linkedin.com/in/reshma-thomas-nobel) or through my [portfolio](https://rshmthomas-cyber.github.io/).
