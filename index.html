@@ -423,6 +423,9 @@
     transition: background 0.2s;
   }
 
+  .skill-block.wide { grid-column: span 2; }
+  .skill-block.wide .skill-block-title { color: var(--accent2); }
+
   .skill-block:hover { background: rgba(126,179,255,0.05); }
 
   .skill-block-title {
@@ -452,8 +455,10 @@
   .tag {
     font-size: 0.78rem;
     color: #8899cc;
-    transition: all 0.2s;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border2);
     background: rgba(181,123,255,0.04);
+    transition: all 0.2s;
   }
 
   .tag:hover {
@@ -847,6 +852,7 @@
     #about { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
 
     .skills-grid { grid-template-columns: 1fr; }
+    .skill-block.wide { grid-column: span 1; }
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.featured { grid-column: span 1; }
     .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -878,7 +884,7 @@
       RESHMA <em>THOMAS</em>
     </h1>
     <p class="hero-desc fade-up fade-up-3">
-      AI/ML Engineer building <strong>production-grade intelligence</strong> — from LLM pipelines and Vision-Language Models to computer vision systems that solve real-world problems. Based in Kochi, Kerala.
+      AI/ML Engineer building <strong>production AI agents</strong> — agentic RAG, multi-agent orchestration, and automation pipelines that ship and get used. Backed by depth in computer vision and document intelligence. Based in Kochi, Kerala.
     </p>
     <div class="hero-cta fade-up fade-up-4">
       <a href="#projects" class="btn btn-primary">View Projects ↓</a>
@@ -905,8 +911,8 @@
     <div class="stat-label">AI/ML Projects</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num">91%</div>
-    <div class="stat-label">Model Accuracy</div>
+    <div class="stat-num">40%</div>
+    <div class="stat-label">Processing Time Cut</div>
   </div>
   <div class="stat-item">
     <div class="stat-num">7+</div>
@@ -926,7 +932,7 @@
       <h2>About</h2>
     </div>
     <p class="about-text">
-      I'm an <strong>AI/ML Engineer</strong> with end-to-end experience designing, training, and deploying machine learning systems that solve real-world problems. Proficient in <strong>Python, TensorFlow, and PyTorch</strong>, with a proven track record building production-grade AI solutions using <strong>LLMs, Vision-Language Models, OCR pipelines, and computer vision architectures</strong>.
+      I'm an <strong>AI/ML Engineer</strong> who builds and ships agentic AI systems. My work spans <strong>agentic RAG, multi-agent orchestration, and workflow automation</strong> — including a labour-law assistant running in production for a corporate team in Doha. Underneath that sits end-to-end depth in <strong>Python, TensorFlow, PyTorch, Vision-Language Models, OCR pipelines, and computer vision</strong>.
     </p>
     <p class="about-text">
       My unique edge lies in bridging <strong>technical depth with communication clarity</strong> — shaped by 7+ years as a Contributing Editor managing global content pipelines across 12 languages. I translate complex AI capabilities into practical, measurable business outcomes.
@@ -956,6 +962,16 @@
       <h2>Skills</h2>
     </div>
     <div class="skills-grid" id="skills">
+      <div class="skill-block wide">
+        <div class="skill-block-title">Agentic AI & Automation</div>
+        <div class="skill-tags">
+          <span class="tag">Claude Tool Use API</span><span class="tag">Google ADK</span>
+          <span class="tag">MCP (Model Context Protocol)</span><span class="tag">Agentic RAG</span>
+          <span class="tag">Multi-Agent Orchestration</span><span class="tag">ChromaDB</span>
+          <span class="tag">Vector Search</span><span class="tag">Human-in-the-Loop Design</span>
+          <span class="tag">Confidence Gating</span>
+        </div>
+      </div>
       <div class="skill-block">
         <div class="skill-block-title">Languages & Tools</div>
         <div class="skill-tags">
@@ -974,7 +990,8 @@
       <div class="skill-block">
         <div class="skill-block-title">LLMs & GenAI</div>
         <div class="skill-tags">
-          <span class="tag">Gemini 1.5 Pro</span><span class="tag">OpenAI API</span>
+          <span class="tag">Claude API</span><span class="tag">Gemini 1.5 Pro</span>
+          <span class="tag">Gemini Vision</span><span class="tag">OpenAI API</span>
           <span class="tag">Prompt Engineering</span><span class="tag">RAG</span><span class="tag">Fine-tuning</span>
           <span class="tag">Qwen 2.5 VLM</span>
         </div>
@@ -1014,9 +1031,42 @@
   </div>
   <div class="projects-grid">
 
-    <!-- Featured -->
+    <!-- Featured 1 — Qatar Labour Law RAG -->
     <div class="project-card featured">
-      <div class="project-label">★ Featured — Ongoing</div>
+      <div class="project-label">★ Featured — Live in Production</div>
+      <div class="project-title">Qatar Labour Law — Agentic RAG Assistant</div>
+      <p class="project-desc">Production agentic RAG system that answers Qatar labour law queries with the exact article cited — live and used daily by a corporate HR team in Doha.</p>
+      <ul class="project-bullets">
+        <li>Built an agentic RAG architecture where retrieval is a tool the model chooses to use — it searches, evaluates whether results are sufficient, and re-queries for multi-step legal questions</li>
+        <li>Designed three custom tools: semantic topic search, deterministic article-number lookup (semantic search is unreliable for exact references), and side-by-side article comparison for cross-provision reasoning</li>
+        <li>Every answer grounded in retrieved source text with the article cited — eliminating hallucination risk in a legal context where a confident wrong answer is a liability</li>
+      </ul>
+      <div class="project-stack">
+        <span class="stack-tag">Claude Tool Use API</span><span class="stack-tag">ChromaDB</span>
+        <span class="stack-tag">PyMuPDF</span><span class="stack-tag">Streamlit</span>
+        <span class="stack-tag">Agentic RAG</span><span class="stack-tag">Vector Search</span>
+      </div>
+    </div>
+
+    <!-- Featured 2 — Saksham -->
+    <div class="project-card featured">
+      <div class="project-label">★ Featured — Multi-Agent AI</div>
+      <div class="project-title">Saksham — Four-Agent Assistive Communication System</div>
+      <p class="project-desc">Multi-agent system that interprets need from live vision and speaks it in a personalized voice — with confidence-based orchestration and human-in-the-loop escalation.</p>
+      <ul class="project-bullets">
+        <li>Architected four specialised agents on Google ADK: perception (OpenCV frame capture), need detection (Gemini Vision), natural language generation, and personalized TTS output</li>
+        <li>Built confidence-gated dynamic orchestration — ≥0.70 proceeds autonomously, &lt;0.70 escalates to a human, &lt;0.50 loops back to recapture, because at very low confidence the input is the problem, not the reasoning</li>
+        <li>Exposed tools via an MCP server for portability and reuse; validated against a 5-scenario eval suite achieving 100% task success at 93% average confidence</li>
+      </ul>
+      <div class="project-stack">
+        <span class="stack-tag">Google ADK</span><span class="stack-tag">Gemini Vision</span>
+        <span class="stack-tag">MCP</span><span class="stack-tag">OpenCV</span>
+        <span class="stack-tag">Multi-Agent Orchestration</span><span class="stack-tag">Human-in-the-Loop</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-label">Document Intelligence — Ongoing</div>
       <div class="project-title">Medicine Blister Text Extraction</div>
       <p class="project-desc">End-to-end document intelligence pipeline for automated medicine blister recognition — enabling robotic pharmacy automation at Apollo Pharmacy.</p>
       <ul class="project-bullets">
@@ -1032,22 +1082,25 @@
     </div>
 
     <div class="project-card">
-      <div class="project-label">AI Application</div>
-      <div class="project-title">AI Credit Card Expense Analyzer</div>
-      <p class="project-desc">Full-stack AI system that parses unstructured financial PDFs and extracts structured transaction data — eliminating manual data entry.</p>
+      <div class="project-label">Document Automation</div>
+      <div class="project-title">AI Expense Analyzer — Automated Financial Document Processing</div>
+      <p class="project-desc">Full-stack pipeline that turns unstructured financial PDFs into structured transaction data — removing manual data entry from the workflow entirely.</p>
       <ul class="project-bullets">
-        <li>Designed with Gemini 1.5 Pro for intelligent PDF parsing and data structuring</li>
-        <li>Built FastAPI REST backend; containerised with Docker for production deployment</li>
+        <li>Built intelligent PDF parsing and structured extraction with Gemini 1.5 Pro, handling inconsistent real-world document formats</li>
+        <li>Shipped a FastAPI REST backend containerised with Docker — designed as a deployable service, not a notebook</li>
+        <li>Directly replaces a repetitive manual process — the same pattern that drives invoice capture and expense-policy checking in finance automation</li>
       </ul>
       <div class="project-stack">
-        <span class="stack-tag">Gemini 1.5 Pro</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Docker</span>
+        <span class="stack-tag">Gemini 1.5 Pro</span><span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">Docker</span><span class="stack-tag">Document Intelligence</span>
+        <span class="stack-tag">Workflow Automation</span>
       </div>
     </div>
 
     <div class="project-card">
-      <div class="project-label">Multimodal AI — Ongoing</div>
+      <div class="project-label">Computer Vision — Foundation for Saksham</div>
       <div class="project-title">Voice for the Voiceless</div>
-      <p class="project-desc">AI communication system for non-verbal children with Cerebral Palsy — using facial expression recognition and real-time caregiver alerts.</p>
+      <p class="project-desc">The single-model prototype that Saksham grew out of — facial expression recognition with real-time caregiver alerts, later rebuilt as a four-agent architecture.</p>
       <ul class="project-bullets">
         <li>Fine-tuned MobileNet CNN for facial expression recognition — 91% accuracy; 89% real-time inference</li>
         <li>Deployed Streamlit app with live webcam CV inference and automated Telegram caregiver alerts</li>
@@ -1055,19 +1108,6 @@
       <div class="project-stack">
         <span class="stack-tag">MobileNet CNN</span><span class="stack-tag">OpenCV</span>
         <span class="stack-tag">Streamlit</span><span class="stack-tag">Telegram Bot API</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-label">ML Web App</div>
-      <div class="project-title">Find My Stress</div>
-      <p class="project-desc">AI-powered student mental health platform with SVM stress prediction and an interactive chatbot for personalised support.</p>
-      <ul class="project-bullets">
-        <li>Built SVM model achieving 91.05% accuracy across Eustress, Distress, and No Stress categories</li>
-        <li>Developed full-stack Django web app with AI chatbot 'StressLess' for stress management</li>
-      </ul>
-      <div class="project-stack">
-        <span class="stack-tag">SVM</span><span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">91.05% Acc.</span>
       </div>
     </div>
 
@@ -1081,6 +1121,19 @@
       </ul>
       <div class="project-stack">
         <span class="stack-tag">YOLO</span><span class="stack-tag">COCO</span><span class="stack-tag">Roboflow</span><span class="stack-tag">Robotics</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-label">ML Web App</div>
+      <div class="project-title">Find My Stress</div>
+      <p class="project-desc">AI-powered student mental health platform with SVM stress prediction and an interactive chatbot for personalised support.</p>
+      <ul class="project-bullets">
+        <li>Built SVM model achieving 91.05% accuracy across Eustress, Distress, and No Stress categories</li>
+        <li>Developed full-stack Django web app with AI chatbot 'StressLess' for stress management</li>
+      </ul>
+      <div class="project-stack">
+        <span class="stack-tag">SVM</span><span class="stack-tag">Django</span><span class="stack-tag">Python</span><span class="stack-tag">91.05% Acc.</span>
       </div>
     </div>
 
@@ -1216,4 +1269,11 @@
   <ul class="footer-links">
     <li><a href="https://github.com/rshmthomas-cyber" target="_blank">GitHub</a></li>
     <li><a href="http://www.linkedin.com/in/reshma-thomas-nobel" target="_blank">LinkedIn</a></li>
-    <li>
+    <li><a href="https://medium.com/@reshma.thomas.nobel" target="_blank">Medium</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Reshma Thomas — AI/ML Engineer · Kochi, Kerala</div>
+</footer>
+
+</body>
+</html>
+   
